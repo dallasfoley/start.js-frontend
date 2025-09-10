@@ -5,7 +5,10 @@ import { setCookies } from "@/lib/functions/setCookies";
 import { LoginFormData } from "@/types";
 
 export type LoginResponse = {
-  data?: any;
+  data?: {
+    accessToken: string;
+    refreshToken: string;
+  };
   success?: boolean;
   status?: number;
   message?: string;
